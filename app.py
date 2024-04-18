@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import pickle
 import pandas as pd
+
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 
 # df = pickle.load(open('df.pkl','rb'))
@@ -76,15 +77,10 @@ if selected == "Home":
             st.write(" ")
         st.write("---")
         st.markdown("<h1 style='text-align: center;'>Industry veterans trust us</h1>", unsafe_allow_html=True)
+        
         images = ['walmart.png', 'wipro.jpg', 'flip.webp', 'aditya.png', 'asian.png']
+        st.image([images[0], images[1], images[2], images[3], images[4]],width=250)
 
-        # Resize images
-        resized_images = []
-        for image_path in images:
-            img = Image.open(image_path)
-            img_resized = img.resize((250, 150))
-            resized_images.append(img_resized)
-        st.image([resized_images[0], resized_images[1], resized_images[2], resized_images[3], resized_images[4]])
         for i in range(0,8):
             st.write(" ")
         st.write("---")
