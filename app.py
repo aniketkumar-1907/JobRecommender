@@ -1,12 +1,13 @@
 import requests
 import streamlit as st
 from streamlit_option_menu import option_menu
-from PIL import Image
 from streamlit_lottie import st_lottie
 import pickle
+import pandas as pd
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 
-df = pickle.load(open('df.pkl','rb'))
+# df = pickle.load(open('df.pkl','rb'))
+df = pd.read_pickle("df.pkl")
 similarity = pickle.load(open('similarity.pkl','rb'))
 
 def recommendation(title):
