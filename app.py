@@ -1,5 +1,7 @@
 import requests
 import streamlit as st
+import sys
+sys.path.insert(1, "C:/past/your/coppied/path/here/streamlit_option_menu")
 from streamlit_option_menu import option_menu
 from PIL import Image
 from streamlit_lottie import st_lottie
